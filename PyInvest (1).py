@@ -82,3 +82,38 @@ grafico_poupanca = '█' * int(montante_poupanca / 1000)
 grafico_fii = '█' * int(media_fii / 1000)
 
 #SAIDA
+print("\n=========== RELATÓRIO DE INVESTIMENTO ===========")
+
+print("Data da simulação:", data_simulacao)
+print("Data estimada de resgate:", data_resgate)
+
+print("\nTotal investido:", locale.currency(total_investido, grouping=True))
+
+print("\n----------- RESULTADOS -----------")
+
+print("CDB:", locale.currency(montante_cdb_liquido, grouping=True))
+print("LCI/LCA:", locale.currency(montante_lci, grouping=True))
+print("Poupança:", locale.currency(montante_poupanca, grouping=True))
+print("FII:", locale.currency(media_fii, grouping=True))
+
+print("\n-------- ESTATÍSTICAS DO FII --------")
+
+print("Média:", locale.currency(media_fii, grouping=True))
+print("Mediana:", locale.currency(mediana_fii, grouping=True))
+print("Desvio padrão:", locale.currency(desvio_fii, grouping=True))
+
+print("\nMeta atingida:", meta_atingida)
+
+print("\n----------- GRÁFICO -----------")
+
+print("\nCDB")
+print(grafico_cdb)
+
+print("\nLCI/LCA")
+print(grafico_lci)
+
+print("\nPOUPANÇA")
+print(grafico_poupanca)
+
+print("\nFII")
+print(grafico_fii)
